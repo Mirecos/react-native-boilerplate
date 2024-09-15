@@ -1,0 +1,20 @@
+node_modules/
+.expo/
+dist/
+npm-debug.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+.idea
+config.ts
+
+
+# macOS
+.DS_Store
+
+android/app/google-services.json
+src/config/firebase/Firebaseconfig.tsx

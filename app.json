@@ -1,0 +1,16 @@
+{
+  "expo": {
+    "plugins": ["@react-native-google-signin/google-signin"],
+    "android": {
+      "googleServicesFile": "/google-services.json"
+    },
+    "ios": {
+      "googleServicesFile": "./GoogleService-Info.plist"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "8ecb19cf-d9da-4d12-8559-e9c57bf2b2ca"
+      }
+    }
+  }
+}
