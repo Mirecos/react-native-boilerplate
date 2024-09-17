@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Appearance, Text } from "react-native";
 import { useState } from "react";
 
 import Ionicons from '@expo/vector-icons/Ionicons';

@@ -12,7 +12,11 @@ const TrainingsStack = createStackNavigator()
 export default function Trainings(props : TrainingsProps){
 
     return (
-        <TrainingsStack.Navigator>
+        <TrainingsStack.Navigator 
+            screenOptions={({ route }) => ({
+                headerShown: false
+            })}
+        >
             <TrainingsStack.Screen name="Trainings_screen" component={TrainingsScreen} />
         </TrainingsStack.Navigator>
     )

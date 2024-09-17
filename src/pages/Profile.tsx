@@ -13,7 +13,11 @@ const ProfileStack = createStackNavigator()
 export default function Profile(props: ProfileProps) {
 
     return (
-        <ProfileStack.Navigator>
+        <ProfileStack.Navigator
+            screenOptions={({ route }) => ({
+                headerShown: false
+            })}
+        >
             <ProfileStack.Screen name='MyProfile' component={MyProfile}/>
             <ProfileStack.Screen name='EditProfile' component={EditProfile}/>
         </ProfileStack.Navigator>

@@ -11,7 +11,11 @@ const ProfileStack = createStackNavigator()
 export default function Home(props : HomeProps){
 
     return (
-        <ProfileStack.Navigator>
+        <ProfileStack.Navigator
+            screenOptions={({ route }) => ({
+                headerShown: false
+            })}
+        >
             <ProfileStack.Screen name="Home_screen" component={HomeScreen} />
         </ProfileStack.Navigator>
     )
