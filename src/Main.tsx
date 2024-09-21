@@ -6,7 +6,7 @@ import { useState } from "react";
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { GoogleSignin } from '@react-native-google-signin/google-signin';
 import {
-  Theme,
+  theme as Theme
 } from 'mr-design';
 import { FIREBASE_AUTH } from './config/firebase/FirebaseConfig';
 import Trainings from './pages/Trainings';
@@ -16,7 +16,7 @@ import Profile from './pages/Profile';
 const Tab = createBottomTabNavigator();
 
 export default function Main() {
-  const theme = React.useContext(Theme.themeContext)
+  const theme = Theme.useTheme()
   const [isConnected, setIsConnected] = useState(FIREBASE_AUTH.currentUser ? true : false)
 
   React.useEffect(() => {
@@ -31,7 +31,7 @@ export default function Main() {
             screenOptions={({ route }) => ({
               headerShown: false,
               tabBarIcon: ({ focused, color, size }) => {
-                const theme = React.useContext(Theme.themeContext)
+                const theme = Theme.useTheme()
                 let iconName;
                 let rn = route.name
 
@@ -44,9 +44,9 @@ export default function Main() {
                     break;
                 }
                 if (focused) {
-                  return <Ionicons name={iconName} size={28} color={theme.theme.colors.primary} />
+                  return <Ionicons name={iconName} size={28} color={theme.colors.primary} />
                 }
-                return <Ionicons name={iconName} size={28} color={theme.theme.colors.text} />
+                return <Ionicons name={iconName} size={28} color={theme.colors.text} />
               },
             })
 
